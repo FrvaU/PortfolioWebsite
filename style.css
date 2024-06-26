@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 130px;
+  width: 100%;
+  background: #F0F0C9;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #352D39;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #352D39;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #020202;
+  background: #ffffff;
+}
+nav .menu-btn i{
+  color: #000000;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #000000;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(255, 255, 255);
+  }
+}
+
+body {
+  background-color: #352D39;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstsection {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  margin: 130px 0;
+}
+
+.firstsection>div {
+  text-align: center;
+  width: 90%; /* Adjust width as needed */
+  margin: 20px 0;
+}
+
+.leftsection {
+  font-size: 3rem;
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+
+.rightsection img {
+  width: 100%;
+  max-width: 500px; /* Adjust maximum width as needed */
+  margin: 50px 0;
+}
+
+.purple {
+  color: #FFFBDB;
+}
+
+.text-gray {
+  color: gray;
+}
+
+#element {
+  color: #077187;
+}
+
+/* Responsive Design (adjust breakpoints as needed) */
+@media screen and (max-width: 768px) { /* Adjust breakpoint for tablet view */
+  .firstsection {
+      flex-direction: column; /* Stack elements vertically */
+  }
+
+  .rightsection img {
+      width: 100%;
+      margin-top: 20px; /* Adjust margin as needed */
+  }
+}
+
+.secondsection {
+  max-width: 90%; /* Adjust percentage as needed */
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center; /* Centers content horizontally */
+}
+
+.secondsection h1 {
+  font-size: 3rem; /* Adjust font size based on screen size */
+  font-family: monospace;
+  margin-bottom: 1rem; /* Adds space between heading and content */
+  font-style: italic;
+}
+
+.secondsection h3 {
+  font-size: 1.5rem; /* Adjust font size based on screen size */
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+@media screen and (min-width: 768px) {
+  .secondsection h1 {
+      font-size: 4rem; /* Larger font size for wider screens */
+  }
+
+  .secondsection h3 {
+      font-size: 2rem; /* Larger font size for wider screens */
+  }
+}
+
+.thirdsection {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.thirdsection h1 {
+  font-size: 3rem; /* Adjust font size based on screen size */
+  font-family: monospace;
+  margin-bottom: 1rem; /* Adds space between heading and content */
+  text-align: center;
+  font-style: italic;
+}
+
+.list-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+font-family: monospace;
+font-size: large;
+font-weight: bold;
+}
+
+.list-container ul {
+flex-basis: 40%;
+margin-right: 20px;
+}
+
+.list-container .icons {
+flex-basis: 40%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+
+.list-container .icons img {
+width: 40px;
+height: 40px;
+margin: 10px;
+}
+
+.icons #ic1:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic2:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic3:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic4:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic5:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic6:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic7:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic8:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic9:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic10:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic11:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic12:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic13:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.icons #ic14:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+
+.fourthsection {
+  max-width: 90%; /* Use percentage for better responsiveness */
+  margin: auto;
+  height: auto; /* Remove fixed height */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.fourthsection h1 {
+  font-size: 3rem; /* Use rems for better responsiveness */
+  font-family: monospace;
+  text-align: center; /* Center the title */
+  font-style: italic;
+}
+
+.fourthsection h3 {
+  position: relative;
+  top: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; /* Center the subtitle */
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap to the next line */
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Spacing between images */
+}
+
+.img-container img {
+  width: 100%; /* Images will take up full available width */
+  max-width: 300px; /* Maximum width for image */
+  height: auto; /* Height will adjust automatically based on aspect ratio */
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center; /* Center content in the footer */
+  padding: 20px; /* Adjust padding as needed */
+  position: fixed; /* Keep footer at the bottom */
+  bottom: 0; /* Keep footer at the bottom */
+  width: 100%; /* Make footer take up full width */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Add spacing between items */
+}
+
+.footer-container li, p {
+  text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) { 
+  .footer-container {
+      flex-direction: row; /* Arrange items horizontally on larger screens */
+      justify-content: space-around; /* Distribute space evenly between items */
+  }
+}

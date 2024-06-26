@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Farwah's Portfolio</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!-- <li><a href="#footer">Contact Me</a></li> -->
+      </ul>
+    </nav>
+    
+    <main>
+      <section class="firstsection" id="home">
+          <div class="leftsection">
+              Hi! My Name is <span class="purple"> Farwah. </span>
+              <div> I am a passionate </div>
+              <span id="element"></span>
+          </div>
+          <div class="rightsection">
+              <img src="bg.png" alt="Background Image">
+          </div>
+      </section>
+
+      <hr>
+
+      <section class="secondsection" id="about">
+        <h1> About </h1>
+        <h3> As a passionate and versatile Web Developer, I specialize in crafting robust and intuitive websites.
+            With a solid foundation in both front-end and back-end technologies, I bring expertise in languages such
+            as JavaScript, HTML, CSS and frameworks like React, Node.js and Bootstrap. My experience extends to
+            managing databases with SQL and NoSQL solutions. I am committed to delivering seamless user experiences
+            and efficient, scalable solutions. I thrive on solving complex problems and continuously expanding my
+            skill set in the ever-evolving tech landscape. </h3>
+       </section>
+
+       <hr>
+
+       <section class="thirdsection" id="services">
+        <h1>Services</h1>
+        <div class="list-container">
+            <ul>
+                <li>Office Automation</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>BootStrap</li>
+                <li>JQuery</li>
+                <li>UI/UX</li>
+            </ul>
+            <div class="icons">
+                <img src="icons8-automation-40.png" id="ic1">
+                <img src="icons8-html-48.png" id="ic2">
+                <img src="icons8-css3-48.png" id="ic3">
+                <img src="icons8-javascript-50.png" id="ic4">
+                <img src="icons8-bootstrap-48.png" id="ic5">
+                <img src="icons8-jquery-50.png" id="ic6">
+                <img src="icons8-figma-48.png" id="ic7">
+            </div>
+        </div>
+        <div class="list-container">
+            <ul class="list2">
+                <li>SEO</li>
+                <li>GitHub</li>
+                <li>JSON</li>
+                <li>MySql</li>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>Canva</li>
+            </ul>
+            <div class="icons">
+                <img src="icons8-seo-50.png" id="ic8">
+                <img src="icons8-github-50.png" id="ic9">
+                <img src="icons8-json-48.png" id="ic10">
+                <img src="icons8-mysql-48.png" id="ic11">
+                <img src="icons8-php-40.png" id="ic12">
+                <img src="icons8-laravel-48.png" id="ic13">
+                <img src="icons8-canva-48.png" id="ic14">
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="fourthsection" id="projects">
+      <h1> Projects </h1>
+      <h3> E-Books: </h3>
+      <div class="img-container">
+          <img src="1.PNG" alt="Project 1">
+          <img src="2.PNG" alt="Project 2">
+          <img src="3.PNG" alt="Project 3">
+          <img src="4.PNG" alt="Project 4">
+          <img src="5.PNG" alt="Project 5">
+          <img src="6.PNG" alt="Project 6">
+          <img src="7.PNG" alt="Project 7">
+          <img src="8.PNG" alt="Project 8">
+          <img src="9.PNG" alt="Project 9">
+          <img src="10.PNG" alt="Project 10">
+          <img src="11.PNG" alt="Project 11">
+          <img src="12.PNG" alt="Project 12">
+          <img src="13.PNG" alt="Project 13">
+          <img src="14.PNG" alt="Project 14">
+          <img src="15.PNG" alt="Project 15">
+          <img src="16.PNG" alt="Project 16">
+          <img src="17.PNG" alt="Project 17">
+          <img src="18.PNG" alt="Project 18">
+      </div>
+      <h3> CARE: </h3>
+      <div class="img-container">
+          <img src="19.PNG" alt="Project 19">
+          <img src="20.PNG" alt="Project 20">
+          <img src="21.PNG" alt="Project 21">
+          <img src="22.PNG" alt="Project 22">
+          <img src="23.PNG" alt="Project 23">
+          <img src="24.PNG" alt="Project 24">
+      </div>
+  </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-container">
+        <p> Get In Touch With Me! </p>
+        <li> farwah.anwar@gmail.com </li>
+        <li> 0331-3377633 </li>
+    </div>
+</footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+      var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Web Designer'],
+          typeSpeed: 50,
+      });
+  </script>
+
+  </body>
+</html>
